@@ -1,0 +1,19 @@
+#button__login{
+    background-color:#f97316;
+    color: white;
+    width: 50%;
+    margin: auto;
+    display: block;
+    &:hover{
+        background-color: orange;
+
+    }
+}
+#home__background{
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-image: url("../../assets/background.png");    
+    height: 900px;
+   
+}

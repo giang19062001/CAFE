@@ -1,0 +1,15 @@
+#button__edit--user{
+    background-color: #f97316;
+    color: white;
+    display: block;
+    margin: auto;
+    &:hover{
+        background-color: orange;
+
+    }
+}
+
+#button__editDisable--user{
+    display: block;
+    margin: auto;
+}

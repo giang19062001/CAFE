@@ -1,0 +1,79 @@
+#food_button--update{
+    color: white;
+    background-color:#FCE22A;
+    &:hover{
+        transform: scale(1.1);
+    }
+}
+#food_button--delete{
+    color: white;
+    background-color: red;
+    &:hover{
+        transform: scale(1.1);
+    }
+}
+#listFood__button--add{
+    transition: 0.3s ease;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    background-color: orangered;
+
+}
+
+#button__add{
+    margin: auto;
+    display: block;
+    color: white;
+    background-color: #009EFF;
+    &:hover{
+        background-color: #007bc7;
+    }
+}
+#button__save{
+  margin: auto;
+  display: block;
+  color: white;
+  width: 50%;
+  background-color: #009EFF;
+  &:hover{
+      background-color: #007bc7;
+  }
+}
+
+
+
+#button__add--image{
+    transition: 0.3s ease;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    background-color: red;
+
+}
+
+#add__ImageBox {
+    position: relative;
+    width: 100%;
+    &:hover {
+      #add__image {
+        opacity: 0.5;
+      }
+      #button__add--image {
+        opacity: 1;
+        cursor: pointer;
+      }
+    }
+    #add__image {
+      opacity: 1;
+      transition: 0.3s ease;
+      backface-visibility: hidden;
+    }
+  
+  }
