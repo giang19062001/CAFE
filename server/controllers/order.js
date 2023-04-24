@@ -54,8 +54,7 @@ const orderController = {
 
   getAllOrder: async (req, res) => {
     try {
-      const order = await Order.find();
-
+      const order = await Order.find().sort({ createdAt: -1 });
       res.status(200).json(order);
     } catch (error) {
       res.status(500).json(error);
@@ -99,9 +98,9 @@ const orderController = {
             _id: { $toString: "$_id" },
             status: { $toString: "$status" },
             total: { $toInt: "$total" },
-            orderDetail : "$orderDetail",
-            ingredient : "$ingredient",
-            createdAt:{ $toString: "$createdAt" } ,
+            orderDetail: "$orderDetail",
+            ingredient: "$ingredient",
+            createdAt: { $toString: "$createdAt" },
             updatedAt: {
               $concat: [
                 {
@@ -131,10 +130,10 @@ const orderController = {
 
       console.log(orderAll);
 
-        const orderArray = await orderAll.filter(
-          (ord) => ord.status === "Đã xong" && ord.updatedAt === req.params.id
-        );
-   
+      const orderArray = await orderAll.filter(
+        (ord) => ord.status === "Đã xong" && ord.updatedAt === req.params.id
+      );
+
       res.status(200).json(orderArray);
     } catch (error) {
       res.status(500).json(error);
