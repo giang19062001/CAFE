@@ -63,7 +63,6 @@ export default function Order({ navigation, router }) {
 
   console.log(data);
   return (
-    <>
       <Provider>
         <Portal>
           <Modal
@@ -227,6 +226,5 @@ export default function Order({ navigation, router }) {
           />
         </SpeedDial>
       </Provider>
-    </>
   );
 }

@@ -18,7 +18,6 @@ const Tab = createBottomTabNavigator();
   });
 
   return (
-    <>
       <Tab.Navigator
         screenOptions={({ route }) => ({
           tabBarIcon: ({ focused, color, size }) => {
@@ -60,7 +59,6 @@ const Tab = createBottomTabNavigator();
           />
         )}
       </Tab.Navigator>
-    </>
   );
 }
 export default Home

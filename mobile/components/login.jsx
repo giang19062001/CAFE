@@ -16,6 +16,7 @@ import { styles } from "../styles/login";
 import { useNavigation } from "@react-navigation/native";
 
 export default function Login() {
+  const navigation = useNavigation()
   const dispatch = useDispatch();
   const [data, setData] = useState({
     phone: "",
@@ -56,7 +57,7 @@ export default function Login() {
   };
 
   return (
-    <> <SafeAreaView style={styles.container}>
+    <SafeAreaView style={styles.container}>
     <Toast
       ref={(ref) => {
         Toast.setRef(ref);
@@ -86,7 +87,7 @@ export default function Login() {
     <TouchableOpacity style={styles.loginBtn} onPress={handleLogin}>
       <Text style={styles.loginText}>Đăng nhập</Text>
     </TouchableOpacity>
-  </SafeAreaView></>
+  </SafeAreaView>
    
   );
 }
